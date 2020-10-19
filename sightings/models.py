@@ -48,7 +48,7 @@ class Squirrel(models.Model):
         max_length = 64,
         choices=AGE_CHOICES,
         null=True,
-        blank=True,
+        blank=True,    
     )
 
     GRAY = 'Gray'

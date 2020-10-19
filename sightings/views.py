@@ -14,12 +14,12 @@ def all_sightings(request):
 def update(request, squirrel_id):
     sighting = Squirrel.objects.filter(squirrel_id=squirrel_id).first()
     if request.method == 'POST':
-        form = SquirrelForm(request.POST, instance=squirrel)
+        form = SquirrelForm(request.POST, instance=sighting)
         if form.is_valid():
             form.save()
             return redirect(f'/sightings/all_sightings')
     else:
-        form = SquirrelForm(instance=squirrel)
+        form = SquirrelForm(instance=sighting)
     return render(request,'sightings/add.html',{'form':form})
 
 def add(request):
