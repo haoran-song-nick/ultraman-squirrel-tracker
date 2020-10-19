@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Add Squirrel</title>
+</head>
+
+<body>
+<h2>Add Squirrel</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <input type="submit" name="Sumbit">
+</form>
+</body>
+</html>
