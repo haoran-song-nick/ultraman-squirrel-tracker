@@ -4,16 +4,18 @@ from django.utils.translation import gettext as _
 class Squirrel(models.Model):
     latitude = models.FloatField(
         help_text=_('Latitude'),
+        
     )
 
-    longitude = models.FloatField(
+    longtitude = models.FloatField(
         help_text=_('Longitude'),
     ) 
 
     squirrel_id = models.CharField(
         help_text=_('Unique Squirrel ID'),
         max_length=256,
-        primary_key=True
+        primary_key=True,
+        unique=True,
     )
     
     AM = 'AM'
@@ -131,7 +133,7 @@ class Squirrel(models.Model):
          help_text=_('Moans'),
     )
 
-    tail_flag = models.BooleanField(
+    tail_flags = models.BooleanField(
          help_text=_('Tail flags'),
     )
 
