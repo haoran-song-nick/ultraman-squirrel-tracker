@@ -9,7 +9,8 @@
     {% csrf_token %}
     {{ form.as_p }}
     <br>
-    <input type="submit" name="Sumbit">
+    <input type="submit" name="Sumbit"> 
+    <input type="button" class="btn"  value="Return" onclick="javascript:history.go(-1);"/>
 </form>
 </body>
 </html>
