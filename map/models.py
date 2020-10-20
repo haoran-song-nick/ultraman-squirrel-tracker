@@ -1,16 +1,11 @@
 from django.db import models
 from django.utils.translation import gettext as _
+from sightings.models import Squirrel
 
 # Create your models here.
-class Point(models.Model):
-    Unique_Squirrel_ID = models.CharField(
-        max_length=100,
-        unique=True,
-        help_text=_('Unique Squirrel ID'),
-    )
-    Latitude = models.FloatField(
-        help_text=_('Latitude'),
-    )
-    Longtitude = models.FloatField(
-        help_text=_('Longtitude'),
-    )
+#class Point(models.Model):
+#    latitude = models.ForeignKey('sightings.Squirrel',on_delete=models.CASCADE)
+
+#    longtitude = models.ForeignKey('sightings.Squirrel',on_delete=models.CASCADE) 
+
+#    squirrel_id = models.ForeignKey('sightings.Squirrel',on_delete=models.CASCADE)

@@ -45,10 +45,11 @@
 				}).addTo(map);
 
 				{% for point in points %}
-				L.marker([{{ point.Latitude }},{{ point.Longitude }}]).addTo(map)
-		    	{% endfor %}
+					var map_point=[{{ point.latitude }},{{ point.longtitude }}]
+					L.marker(map_point).addTo(map)
 				
-		    </script>
+				{% endfor %}
+			</script>
 	</body>
 </html>
 

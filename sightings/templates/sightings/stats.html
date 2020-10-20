@@ -1,0 +1,76 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Squirrel General Stats</title>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="https://code.highcharts.com/highcharts.src.js"></script>
+  <script>
+    Highcharts.chart('container', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+	    text: 'Squirrel Activity Status by Shift'
+        },
+        xAxis: {
+	    categories: [
+	      {% for entry in dataset %}'{{ entry.shift }} Class'{% if not forloop.last %}, {% endif %}{% endfor %}
+	    ]
+        },
+        series: [{
+	    name: 'Running',
+	    data: [
+	      {% for entry in dataset %}{{ entry.running_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	    ],
+        },{
+	    name: 'Not running',
+	    data: [
+	      {% for entry in dataset %}{{ entry.not_running_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	    ],
+	},{
+	    name: 'Chasing',
+	    data: [
+              {% for entry in dataset %}{{ entry.chasing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+            ],
+	},{
+	    name: 'Not chasing',
+	    data: [
+	      {% for entry in dataset %}{{ entry.not_chasing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}      
+	    ],
+	},{
+            name: 'Climbing',
+            data: [
+	      {% for entry in dataset %}{{ entry.climbing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+            ],
+        },{
+            name: 'Not climbing',
+            data: [
+	      {% for entry in dataset %}{{ entry.not_climbing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+            ],
+	},{
+            name: 'Eating',
+            data: [
+	      {% for entry in dataset %}{{ entry.eating_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	    ],
+	},{
+            name: 'Not eating',
+            data: [
+	      {% for entry in dataset %}{{ entry.not_eating_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	    ],
+        },{
+	    name: 'Foraging',
+            data: [
+	      {% for entry in dataset %}{{ entry.foraging_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	    ],
+        },{
+            name: 'Not foraging',
+	    data: [
+	      {% for entry in dataset %}{{ entry.not_foraging_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	    ]
+	}]
+    });
+  </script>
+</body>
+</html>
