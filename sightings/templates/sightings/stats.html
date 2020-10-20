@@ -16,58 +16,58 @@
         },
         xAxis: {
 	    categories: [
-	      {% for entry in dataset %}'{{ entry.shift }} Class'{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}'{{ i.shift }} Class'{% if not forloop.last %}, {% endif %}{% endfor %}
 	    ]
         },
         series: [{
 	    name: 'Running',
 	    data: [
-	      {% for entry in dataset %}{{ entry.running_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}{{ i.running_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
 	    ],
         },{
 	    name: 'Not running',
 	    data: [
-	      {% for entry in dataset %}{{ entry.not_running_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}{{ i.not_running_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
 	    ],
 	},{
 	    name: 'Chasing',
 	    data: [
-              {% for entry in dataset %}{{ entry.chasing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+              {% for i in dataset %}{{ i.chasing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
             ],
 	},{
 	    name: 'Not chasing',
 	    data: [
-	      {% for entry in dataset %}{{ entry.not_chasing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}      
+	      {% for i in dataset %}{{ i.not_chasing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}      
 	    ],
 	},{
             name: 'Climbing',
             data: [
-	      {% for entry in dataset %}{{ entry.climbing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}{{ i.climbing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
             ],
         },{
             name: 'Not climbing',
             data: [
-	      {% for entry in dataset %}{{ entry.not_climbing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}{{ i.not_climbing_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
             ],
 	},{
             name: 'Eating',
             data: [
-	      {% for entry in dataset %}{{ entry.eating_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}{{ i.eating_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
 	    ],
 	},{
             name: 'Not eating',
             data: [
-	      {% for entry in dataset %}{{ entry.not_eating_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}{{ i.not_eating_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
 	    ],
         },{
 	    name: 'Foraging',
             data: [
-	      {% for entry in dataset %}{{ entry.foraging_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}{{ i.foraging_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
 	    ],
         },{
             name: 'Not foraging',
 	    data: [
-	      {% for entry in dataset %}{{ entry.not_foraging_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+	      {% for i in dataset %}{{ i.not_foraging_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
 	    ]
 	}]
     });
