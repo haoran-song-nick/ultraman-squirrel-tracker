@@ -44,10 +44,12 @@
 		    		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 				}).addTo(map);
 
+				{% for point in points %}
+					var map_point=[{{ point.latitude }},{{ point.longtitude }}]
+					L.marker(map_point).addTo(map)
 				
-				L.marker([{{ points.Latitude }},{{ points.Longitude }}]).addTo(map)
-		    	
-		    </script>
+				{% endfor %}
+			</script>
 	</body>
 </html>
 

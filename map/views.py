@@ -1,12 +1,11 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 
-from .models import Point
 from sightings.models import Squirrel
 
 def index(request):
 
-	points= Squirrel.objects.all()
+	points= Squirrel.objects.all()[:100]
 
 	context = {
 		'points': points,
