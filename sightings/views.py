@@ -17,7 +17,7 @@ def update(request, squirrel_id):
         form = SquirrelForm(request.POST, instance=sighting)
         if form.is_valid():
             form.save()
-            return redirect(f'/sightings/all_sightings')
+            return redirect('/sightings/')
     else:
         form = SquirrelForm(instance=sighting)
     return render(request,'sightings/add.html',{'form':form})
@@ -27,7 +27,7 @@ def add(request):
         form = SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(f'/sightings/all_sightings')
+            return redirect('/sightings/')
     else:
         form = SquirrelForm()
 

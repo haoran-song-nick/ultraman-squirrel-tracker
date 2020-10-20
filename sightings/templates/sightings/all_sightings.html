@@ -7,7 +7,7 @@
             <a href=add>Click to add new squirrels!</a>
             {% for sighting in sightings %}
             <li>
-            {{ sighting.squirrel_id }}  {{ sighting.date }}<a href="{% url 'update' sighting.squirrel_id %}">  Click to update</a>
+            {{ sighting.squirrel_id }} found at {{ sighting.date }}<a href="{% url 'update' sighting.squirrel_id %}">,   Click to update</a>
             </li>
             {% endfor %}
         </ul>

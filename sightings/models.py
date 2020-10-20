@@ -15,7 +15,6 @@ class Squirrel(models.Model):
         help_text=_('Unique Squirrel ID'),
         max_length=256,
         primary_key=True,
-        unique=True,
     )
     
     AM = 'AM'
