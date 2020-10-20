@@ -1,7 +1,13 @@
 from django.shortcuts import render,redirect
-from .forms import SquirrelForm
+from django.template import loader
+from django.db.models import Count,Q
 from django.db import connection
+
+from .forms import SquirrelForm
 from .models import Squirrel
+
+def index(request):
+    return render(request, 'sightings/index.html')
 
 def all_sightings(request):
     sightings = Squirrel.objects.all()
@@ -16,7 +22,7 @@ def update(request, squirrel_id):
         form = SquirrelForm(request.POST, instance=sighting)
         if form.is_valid():
             form.save()
-            return redirect('/sightings/')
+            return redirect('/squirrels/sightings/')
     else:
         form = SquirrelForm(instance=sighting)
     return render(request,'sightings/add.html',{'form':form})
@@ -26,7 +32,7 @@ def add(request):
         form = SquirrelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/sightings/')
+            return redirect('/squirrels/sightings/')
     else:
         form = SquirrelForm()
 
