@@ -28,7 +28,7 @@ There are five views:
   * shows general stats about the sightings
    
 ## Group Name
-Project Ultraman, Section 3
+Project Ultraman, Section 001
 
 ## UNIs
 UNIs: [jl5772, hs3229]
