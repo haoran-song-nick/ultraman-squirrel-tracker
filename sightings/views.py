@@ -25,7 +25,7 @@ def update(request, squirrel_id):
             return redirect('/squirrels/sightings/')
     else:
         form = SquirrelForm(instance=sighting)
-    return render(request,'sightings/add.html',{'form':form})
+    return render(request,'sightings/update.html',{'form':form})
 
 def add(request):
     if request.method=='POST':
