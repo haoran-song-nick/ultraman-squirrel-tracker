@@ -28,10 +28,10 @@ There are five views:
   * shows general stats about the sightings
    
 ## Group Name
-Project Ultraman, Section 3(?)
+Project Ultraman, Section 3
 
 ## UNIs
 UNIs: [jl5772, hs3229]
 
 ## Link to server
-空缺！！
+https://github.com/haoran-song-nick/ultraman-squirrel-tracker.git
