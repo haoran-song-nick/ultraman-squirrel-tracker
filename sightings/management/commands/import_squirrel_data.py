@@ -34,7 +34,7 @@ class Command(BaseCommand):
 					y = date[4:]
 					new_date = y + '-' + m + '-' + d
 					p = Squirrel(
-						longtitude = float(row[0]),
+						longitude = float(row[0]),
 						latitude = float(row[1]),
 						squirrel_id = row[2],
 						shift = row[4],
