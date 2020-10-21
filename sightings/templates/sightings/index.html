@@ -1,3 +1,4 @@
+{%load static%}
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,12 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Cover Template · Bootstrap</title>
+
+    <title>Squirrel Tracker</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
 
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -26,32 +28,45 @@
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
+          width：100%;
         }
-      }
+    }
+    
+     
     </style>
+   
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="{% static 'css/cover.css' %}" rel="stylesheet">
   </head>
   <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">Squirrel Traker</h3>
+      <h3 class="masthead-brand">Group Ultraman</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="/map/">Map</a>
-        <a class="nav-link" href="/squirrels/sightings/">Sightings Detail</a>
+        <a class="nav-link active" href=/squirrels/>Home</a>
+        <a class="nav-link active" href="{% url 'admin:login' %}">Login</a>
+        <a class="nav-link active" href="mailto:jl5772@columbia.edu">Contact</a>
       </nav>
     </div>
   </header>
 
   <main role="main" class="inner cover">
-    <h1 class="cover-heading">Squirrel Traker</h1>
-    <p class="lead">Squirrel Traker is a project that keeps track of all the known squirrels in Central Park. And it allows people to add, update, and view squirrel data.</p>
+    <br>
+    <br>
+    <h1 class="cover-heading">Squirrel Tracker</h1>
+    <p class="lead">This is an app that keeps track of all the known squirrels starts with Central Park. It is built with functions to import the 2018 Central Park Squirrel Census data and allows to add, update and view the squirrel data.</p>
+    <p class="lead">
+      <a href="/squirrels/sightings/" class="btn btn-lg btn-secondary">All Sightings</a>
+    </p>
+    <p class="lead">
+      <a href="/map/" class="btn btn-lg btn-secondary">Show in Map</a>
+    </p>
   </main>
 
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>Team Project for Tools-for-analytics, by <a href=https://linkedin.com/in/jiaming-lu-229305191 target="_blank">Jiaming Lu</a> & <a href="https://linkedin.com/in/haoran-nick-song" target="_blank">Haoran Song</a>.</p>
+      <p>Squirrel Tracker Web Application for Tools-for-analytics, by <a href=https://linkedin.com/in/jiaming-lu-229305191 target="_blank">Jiaming Lu</a> & <a href="https://linkedin.com/in/haoran-nick-song" target="_blank">Haoran Song</a>.</p>
     </div>
   </footer>
 </div>
