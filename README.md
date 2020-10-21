@@ -17,7 +17,7 @@ There are five views:
   * located at: */sightings*
   * lists all squirrel sightings with links to edit each and a single link to the “add” sighting view
 - Update
-  * located at: */sightings/<unique-squirrel-id>*
+  * located at: */sightings/unique-squirrel-id*
   * updates a particular sighting providing unique-squirrel-id
 - Add
   * located at: */sightings/add*
